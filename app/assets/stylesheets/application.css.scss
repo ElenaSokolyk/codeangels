@@ -2,10 +2,13 @@
 @import "foundation-grid";
 @import "fonts";
 
-@include global-reset;
+$violet: #9189ff;
+$orange: #e05d41;
+$base-font-size: 14px;
+$base-line-height: 20px;
 
-#hello {
-  font-family: "Raleway";
-  margin-top: 40px;
-  text-align: center;
-}
+@include global-reset;
+@include establish-baseline;
+
+@import "layout";
+@import "modules/nav";

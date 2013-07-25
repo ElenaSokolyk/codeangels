@@ -1,0 +1,27 @@
+body {
+  background-color: #a0ddf3;
+  font-family: "Raleway", "Helvetica Neue", Arial, sans-serif;
+}
+
+  header {
+    background-color: $violet;
+    border-bottom: 3px $orange solid;
+    .wrapper {
+      @include outerRow;
+    }
+  }
+
+    #small-logo {
+      @include column(4);
+      .img {
+        background-image: image-url("logo-small.png");
+        width: 195px;
+        height: 41px;
+        margin: 10px 0 6px;
+      }
+      //@include background('logo-small.png');
+    }
+
+    #menu {
+      @include column(8);
+    }

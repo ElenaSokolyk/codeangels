@@ -1,0 +1,232 @@
+body {
+  background-color: #a0ddf3;
+  font-family: "Raleway", "Helvetica Neue", Arial, sans-serif;
+   .title {
+        text-align: center;
+        margin: 48px auto;
+        font-size: 40px;
+        margin-top: 100px;
+        color: $light-orange;
+        position: relative;
+        &:before {
+          position: absolute;
+          content: "";
+          width: 300px;
+          height: 3px;
+          background-color: $light-orange;
+          left: 76px;
+          top: 9px; 
+        }
+        &:after {
+          position: absolute;
+          content: "";
+          width: 300px;
+          height: 3px;
+          background-color: $light-orange;
+          right: 76px;
+          top: 9px; 
+        }
+    }
+
+    .all {
+        line-height: 26px;
+        margin: 0 auto;
+        width: 100%;
+        min-width: 500px;
+        max-width: 960px;
+        .two-big {
+          @include pie-clearfix;
+          .orange-box {
+            float: right;
+            width: 476px;
+            @include box-sizing(border-box);
+            background-color: $orange;
+            border-bottom: 3px $green solid;
+            padding: 32px 42px;
+            font-size: 20px;
+            color: white;
+            position: relative;
+            p {
+              text-indent: 40px;
+              line-height: 32px;
+            }
+          }
+          .green-box {
+            background-color:$green;
+            @include box-sizing(border-box);
+            width: 476px;
+            float: left;
+            border-bottom: 3px $orange solid;
+            padding: 32px 42px;
+            font-size: 20px;
+            position: relative;
+          }
+        }
+        .violet-box {
+            @include box-sizing(border-box);
+            background-color: rgb(117,0,167);
+            width: 476px;
+            margin-top: -180px;
+            border-bottom: 3px rgb(12,243,137) solid;
+            padding: 20px 42px;
+            font-size: 25px ;
+            color: white;
+            position: relative;
+        }
+      }
+}
+
+  header {
+    background-color: $violet;
+    border-bottom: 3px $orange solid;
+    .wrapper {
+      @include outerRow;
+    }
+  }
+
+    #small-logo {
+      @include column(5);
+      .img {
+        background-image: image-url("logo-small.png");
+        width: 195px;
+        height: 41px;
+        margin: 10px 0 6px;
+      }
+    }
+
+    #menu {
+      @include column(7);
+    }
+  #content {
+    padding-top: 60px;
+    overflow: hidden;
+    @include pie-clearfix; 
+    background-image: image-url("bg.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    #start-group {
+      #big-logo {
+        .img {
+          background-image: image-url("logo-large.png");
+          width: 296px;
+          height: 206px;
+          margin: auto;
+          padding: 0px;
+        }
+      }
+      .title {
+        margin-top: 60px;
+        color: black;
+        &:before {
+          display: none;
+        }
+        &:after {
+          display: none;
+        }
+      }
+     
+      #photo-team {
+        @include outerRow;
+        #photo {
+          @include column(8);
+          background-image: image-url("photo.jpg");
+          width: 640px;
+          height: 437px;
+          margin: auto;
+            #backgr {
+              width: 640px;
+              height: 437px;
+              border-bottom: 3px $green solid;
+              float: left;
+            }
+        }
+        #team-description {
+          @include column(4);
+          background-color: $light-orange;
+          width: 316px;
+          height: 440px;
+          font-family: "Raleway";
+          font-size: 22px;
+          line-height: 26px;
+          color: white;
+          padding: 20px 12px;
+          border-bottom: 3px $green solid;
+        }
+      }
+    }
+    #ror-course-group {
+      .all {
+        line-height: 26px;
+        margin: 0 auto;
+        width: 100%;
+        min-width: 500px;
+        max-width: 960px;
+        .two-big {
+          @include pie-clearfix;
+          .green-box {
+            height: 476px;
+            &:after {
+              position: absolute;
+              content: "";
+              width: 100px;
+              height: 100px;
+              background-color: rgb(218,106,82);
+              top: 104px;
+              right: -589px;
+            }
+          }
+          .orange-box {
+            height: 660px;
+            &:before {
+              position: absolute;
+              content: "";
+              width: 100px;
+              height: 100px;
+              background-color: rgb(218,106,82);
+              top: 0;
+              left: 481px;
+            }
+            &:after {
+              position: absolute;
+              content: "";
+              width: 100px;
+              height: 100px;
+              background-color: rgb(205,131,118);
+              top: 0;
+              left: 586px;
+            }
+          }
+        }
+     
+        .violet-box {
+          height: 180px;
+          &:before {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 100px;
+            background-color: $orange;
+            bottom: 0;
+            left: -104px;
+          }  
+        }
+      }  
+
+    }
+    #js-course {
+      .all {
+        .two-big {
+          .green-box {
+            height: 515px;
+          }
+          .orange-box {
+            height: 610px;
+          }
+        }
+        .violet-box {
+          margin-top: -90px;
+          height: 300px;
+        } 
+      }
+    }
+  }

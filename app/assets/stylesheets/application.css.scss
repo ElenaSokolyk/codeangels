@@ -1,0 +1,16 @@
+@import "compass";
+@import "foundation-grid";
+@import "fonts";
+
+$violet: #9189ff;
+$orange: #e05d41;
+$green: rgb(122,167,0);
+$light-orange: rgb(224,93,65);
+$base-font-size: 14px;
+$base-line-height: 20px;
+
+@include global-reset;
+@include establish-baseline;
+
+@import "layout";
+@import "modules/nav";

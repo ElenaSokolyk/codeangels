@@ -2,15 +2,28 @@
 @import "foundation-grid";
 @import "fonts";
 
-$violet: #9189ff;
+$violet: #7500a7;
+$blue: #9189ff;
 $orange: #e05d41;
 $green: rgb(122,167,0);
 $light-orange: rgb(224,93,65);
+$turquoise : #65e6c9;
+$background: #a0ddf3;
+$anthracite: #232d3b;
+$button-active-color: #0acc72;
+$border-field-color: #0cf389;
+$square-side: 100px;
 $base-font-size: 14px;
 $base-line-height: 20px;
+$large-font-size: 40px;
+$large-line-height: 50px;
+$medium-font-size: 22px;
+$slide-font-size: 20px;
+$apply-font-size: 25px;
 
 @include global-reset;
 @include establish-baseline;
 
 @import "layout";
-@import "modules/nav";
+@import "modules/*";
+@import "components/*";

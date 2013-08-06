@@ -1,0 +1,3 @@
+.label {
+  @include adjust-font-size-to($slide-font-size,1,$apply-font-size);
+}

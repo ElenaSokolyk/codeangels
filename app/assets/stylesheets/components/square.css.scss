@@ -1,0 +1,52 @@
+@mixin square($color) {
+  width: $square-side;
+  height: $square-side;
+  background-color: $color;
+  position: absolute;
+}
+
+.square {
+  @include square($light-orange);
+  left: -($square-side + 4px);
+  bottom: 0px;
+}
+
+.square1 {
+  @include square(#da6a52);
+  right: -($square-side + 4px);
+  top: 0px;
+}
+.square2{
+  @include square(#da6a52);
+  right: -($square-side + 4px);
+  top: $square-side + 4px;
+}
+.square3 {
+  @include square(#cd8376);
+  right: -($square-side * 2 + 8px);
+  top: 0px;
+}
+
+.square4 {
+  @include square($light-orange);
+  left: -($square-side + 4px);
+  bottom: -($square-side + 4px);
+}
+
+.square5 {
+  @include square($light-orange);
+  left: 0px;
+  bottom: -($square-side + 4px);
+}
+
+.square-green {
+  @include square($green);
+  bottom: 0px;
+  left: $square-side * 4 + 82px;
+}
+
+.square-green2 {
+  @include square($green);
+  left: $square-side * 4 + 82px;
+  bottom: $square-side + 4px;
+}

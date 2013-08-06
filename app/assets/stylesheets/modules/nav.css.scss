@@ -9,9 +9,21 @@ nav {
     text-decoration: none;
     @include padding-leader;
     @include padding-trailer;
+    position: relative;
+
     &:hover, &.active {
       background-color: $orange;
       color: #fff;
+    
+       &:after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        width: 100%;
+        left: 0;
+        height: 3px;
+        background-color: $blue;
+      }
     }
   }
 }

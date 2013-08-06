@@ -1,0 +1,20 @@
+.btn {
+  display: block;
+  border: none;
+  background-color: $border-field-color;
+  color: $violet;
+  float: right;
+  font-size: 100%;
+  @include margin-leader(0.5);
+  width: 125px;
+  height: 40px;
+  font-weight: normal;
+  border-bottom: 3px  $border-field-color solid;
+
+  &:hover {
+    border-bottom: 3px $light-orange solid;
+  }
+  &:active {
+    background-color: $button-active-color;
+  }
+}

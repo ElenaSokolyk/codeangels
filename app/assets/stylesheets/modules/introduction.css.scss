@@ -1,0 +1,48 @@
+#intoduction {
+  #big-logo {
+    @include outerRow;
+    .img {
+      background-image: image-url("logo-large.png");
+      @include margin-leader(3);
+      @include margin-trailer(2.5);
+      @include column(4,center); 
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 206px;
+    }
+  }
+  .title {
+    @include adjust-font-size-to($large-font-size);
+    text-align: center;
+    font-weight: 200;
+    color: $anthracite;
+   
+    @include margin-trailer; 
+  } 
+  .content {
+    @include outerRow;
+    border-bottom: 3px $green solid;
+    background-color: $light-orange;
+    #photo {
+      @include column(8);
+      background-image: image-url("photo.jpg") ;
+      background-repeat: no-repeat;
+      height: 448px;
+      background-size: cover;
+      float: left;
+      @include box-sizing(border-box);
+     }  
+    .description {
+      @include column(4);
+      float: right;
+      color: white;
+      font-weight: 200;
+      @include adjust-font-size-to($medium-font-size,1.35);
+      padding-right: 20px;
+      padding-left: 11px;
+      @include padding-leader(0.69);
+      @include padding-trailer(0.69);
+      @include box-sizing(border-box);
+    }
+  }
+}

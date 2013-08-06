@@ -4,11 +4,11 @@ $screenSmall: 768px !default;
 $screenMedium: 1279px !default;
 $screenXlarge: 1441px !default;
 
-$rowWidth: 964px;
-$columnGutter: 4px;
-$totalColumns: 12;
-$mobileTotalColumns: 4;
-$blockGridElements: 12;
+$rowWidth: 960px ;
+$columnGutter: 4px ;
+$totalColumns: 12 ;
+$mobileTotalColumns: 4 ;
+$blockGridElements: 12 ;
 
 @function gridCalc($colNumber, $totalColumns) {
   @return percentage(($colNumber / $totalColumns));

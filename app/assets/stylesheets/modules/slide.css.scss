@@ -1,0 +1,202 @@
+.slide {
+  > .header {
+    @include margin-leader(6);
+    position: relative;
+      .line {
+        @include outerRow;  
+        width: 90%;
+        border-bottom: 2px $light-orange solid;
+        margin-bottom: -92px;
+      }  
+        h2.text { 
+          text-align: center;
+          color: $light-orange;
+          @include adjust-font-size-to($large-font-size);
+          @include margin-leader;
+          @include margin-trailer;
+          span {
+          background-color: $background;
+         }
+        }
+  }
+  > .content {
+    @include outerRow;
+    @include margin-leader(2);
+  }
+ 
+    .course { 
+      .left { 
+        @include column(6);
+        @include box-sizing(border-box);
+        .summary {
+          background-color: $green;
+          color: $anthracite;
+          @include adjust-font-size-to($slide-font-size, 1.35);
+          font-weight: normal;
+          @include padding-leader(1.5);
+          @include padding-trailer(1.5);
+          padding-left: 40px;
+          padding-right: 40px;
+          border-bottom: 3px $light-orange solid;
+          @include box-sizing(border-box);
+        }
+        .apply {
+          background-color: $violet;
+          color: white;
+          @include adjust-font-size-to($apply-font-size,1.5,$base-font-size);
+          @include padding-leader(0.5);
+          @include padding-trailer;
+          margin-top: 4px;
+          padding-left: 40px;
+          padding-right: 40px;
+          border-bottom: 3px $turquoise solid;
+          font-weight: bold;
+          @include box-sizing(border-box);
+          position: relative;
+          a {
+            text-decoration: none;
+            color: white;
+            padding-left: 160px;
+            padding-right: 160px;
+            @include padding-leader(0.1);
+            @include padding-trailer(0.1);
+            font-size: 210px;
+            display: block;
+            font-weight: 200;
+          }
+          .form {
+            font-weight: normal;
+            @include pie-clearfix;
+            @include margin-leader(0.7);
+            td.text {
+              vertical-align: top;
+            }
+          }
+        }
+      }
+      .right {
+        @include column(6);
+        .description {
+          background-color: $light-orange;
+          color: white;
+          border-bottom: 3px $green solid;
+          @include adjust-font-size-to($slide-font-size, 1.2);
+          font-weight: normal;
+          @include padding-leader(1.5);
+          @include padding-trailer(2.4);
+          padding-left: 40px;
+          padding-right: 40px;
+          @include box-sizing(border-box);
+          position: relative;
+          p {
+            text-indent: 72px;
+            @include adjust-leading-to(1.5, $base-line-height);
+          }
+        }
+      }
+    }
+ 
+  .angels { 
+    @include block-grid(3,4px,4px); 
+    li {
+      .item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: $green;
+        height: 315px;
+        white-space: normal;
+        @include adjust-font-size-to($slide-font-size,1.2,$base-font-size);
+        color: $anthracite;
+        font-weight: 200;
+        @include box-sizing(border-box);
+
+        &.tyrion {
+          background-image: image-url("tyrion.jpg");
+          border-bottom: 3px $light-orange solid;
+          > .text {
+            display: none;
+          }
+
+          &:hover {   
+            > .text {
+                background-color: $green;
+                @include padding-trailer(0.7);
+                @include padding-leader;
+                padding-right: 38px;
+                padding-left: 38px;
+                border-bottom: 3px $light-orange solid;
+                @include box-sizing(border-box);
+                display: block;
+                height: 315px;     
+                &.right { margin-left: -4px; }
+                &.left { margin-right: -4px; }
+            }
+          }             
+        }
+
+        &.jon {
+          background-image: image-url("jon.jpg"); 
+          border-left: 3px $light-orange solid;
+
+          > .text { display: none; }
+
+          &:hover {
+            > .text {
+              background-color: $green;
+              @include padding-trailer(0.9);
+              @include padding-leader;
+              padding-right: 42px;
+              padding-left: 38px;              display: block;
+              height: 319px;  
+
+              &.top {
+                margin-bottom: -7px;
+              }
+
+              &.bottom {
+                margin-top: -7px;
+              }
+            }
+          }
+        }
+      
+        &.daenerys {
+          background-image: image-url("daenerys.jpg");
+          border-bottom: 3px $light-orange solid;
+          @include box-sizing(border-box);
+          > .text {
+            display: none;
+          }
+          &:hover {
+             > .text {
+              background-color: $green;
+              @include padding-trailer(0.9);
+              @include padding-leader;
+              padding-right: 38px;
+              padding-left: 38px;
+              border-bottom: 3px $light-orange solid;
+              @include box-sizing(border-box);
+              display: block;
+              height: 315px;  
+
+              &.right {
+                 margin-left: -4px;
+              }
+              &.left {
+                margin-right: -4px;
+              }
+            }
+          }
+        }
+
+
+      }
+    }
+  }
+}
+#angels.slide {
+  > .header {
+      @include margin-leader(10);
+
+  } 
+}
